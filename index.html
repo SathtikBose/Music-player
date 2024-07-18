@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Music Player</h1>
+        </div>
+    </header>
+    <div class="container main-content">
+        <div class="song-banner">
+            <img id="songImage" src="covers/cover1.jpg" alt="Song Cover">
+            <div class="song-details">
+                <h2 id="songTitle">Song Title</h2>
+                <p id="songTime">0:00 / 0:00</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <button onclick="playSong('songs/1.mp3', 'Tum Hi Ho', 'covers/cover1.jpg')">Tum Hi Ho</button>
+            <button onclick="playSong('songs/2.mp3', 'Phir Mohabbat', 'covers/cover2.jpg')">Phir Mohabbat</button>
+            <button onclick="playSong('songs/3.mp3', 'Tu Hain Toh', 'covers/cover3.jpg')">Tu Hain Toh</button>
+            <button onclick="playSong('songs/4.mp3', 'Apna Bana Le', 'covers/cover4.jpg')">Apna Bana Le</button>
+            <button onclick="playSong('songs/5.mp3', 'Phir Bhi Tumko Chaahunga', 'covers/cover5.jpg')">Phir Bhi Tumko Chaahunga</button>
+            <button onclick="playSong('songs/6.mp3', 'Agar Tum Saath Ho', 'covers/cover6.jpg')">Agar Tum Saath Ho</button>
+            <button onclick="playSong('songs/7.mp3', 'Raabta', 'covers/cover7.jpg')">Raabta</button>
+            <button onclick="playSong('songs/8.mp3', 'O Saathi', 'covers/cover8.jpg')">O Saathi</button>
+            <button onclick="playSong('songs/9.mp3', 'Soch Na Sake', 'covers/cover9.jpg')">Soch Na Sake</button>
+            <button onclick="playSong('songs/10.mp3', 'Soulmate', 'covers/cover10.jpg')">Soulmate</button>
+        </div>
+        <div class="player-container">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="controls">
+                <button onclick="seek(-5)">-5s</button>
+                <button onclick="prevSong()">Prev</button>
+                <button id="playPauseBtn">Play</button>
+                <button onclick="nextSong()">Next</button>
+                <button onclick="seek(5)">+5s</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
